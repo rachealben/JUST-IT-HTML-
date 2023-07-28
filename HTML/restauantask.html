@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Order Form</title>
+</head>
+<body>
+  <h1>Order Online</h1>
+
+  <!-- Order Section -->
+  <h2>Order</h2>
+  <form id="orderForm">
+    <label for="item">Select an item:</label>
+    <select id="item" name="item">
+      <option value="pizza">Pizza</option>
+      <option value="burger">Burger</option>
+      <!-- Add more item options as needed. -->
+    </select><br>
+
+    <!-- Add more input fields for customizations, quantity, size, etc. -->
+
+    <label for="totalPrice">Total Price:</label>
+    <span id="totalPriceDisplay">$0.00</span><br>
+  </form>
+
+  <!-- Personal Details Section -->
+  <h2>Personal Details</h2>
+  <form id="personalDetailsForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+  </form>
+
+  <!-- Card Details Section -->
+  <h2>Card Details</h2>
+  <form id="cardDetailsForm">
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" name="cardNumber" required><br>
+
+    <label for="expiryDate">Expiry Date:</label>
+    <input type="text" id="expiryDate" name="expiryDate" required><br>
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required><br>
+  </form>
+
+  <!-- Submit Button -->
+  <button type="button" onclick="submitOrder()">Place Order</button>
+
+  <script>
+    // JavaScript code for handling form submission and computing total price
+    function submitOrder() {
+      // Gather form data and handle form submission to the server
+      // You would need to implement this part using a back-end server
+      console.log("Order submitted!");
+    }
+
+    // JavaScript code for computing the total price based on selected items
+    // You would need to implement this based on your actual pricing logic
+    // For this example, we'll just set a fixed price of $10 for any item selected
+    const itemSelect = document.getElementById("item");
+    const totalPriceDisplay = document.getElementById("totalPriceDisplay");
+
+    itemSelect.addEventListener("change", () => {
+      const selectedPrice = 10; // Replace this with actual pricing logic
+      totalPriceDisplay.textContent = "$" + selectedPrice.toFixed(2);
+    });
+  </script>
+</body>
+</html>

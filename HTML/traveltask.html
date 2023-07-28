@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Company Form</title>
+</head>
+<body>
+  <h1>Plan Your Dream Vacation</h1>
+  <form id="travelForm">
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination" required><br>
+
+    <label for="board">Board Type:</label>
+    <select id="board" name="board" required>
+      <option value="room-only">Room Only</option>
+      <option value="bed-and-breakfast">Bed and Breakfast</option>
+      <option value="half-board">Half Board</option>
+      <option value="full-board">Full Board</option>
+      <option value="all-inclusive">All-Inclusive</option>
+    </select><br>
+
+    <p>Select additional options:</p>
+    <input type="checkbox" id="excursions" name="options" value="excursions">
+    <label for="excursions">Excursions</label><br>
+
+    <input type="checkbox" id="spa" name="options" value="spa">
+    <label for="spa">Spa</label><br>
+
+    <input type="checkbox" id="fitness" name="options" value="fitness">
+    <label for="fitness">Fitness Center</label><br>
+
+    <input type="checkbox" id="parasailing" name="options" value="parasailing">
+    <label for="parasaiing">Parasailing</label><br>
+
+
+
+
+    <input type="submit" value="Submit">
+  </form>
+  
+  <!--Data list-->
+
+  
+  <h1>Choose a fruit from the list:</h1>
+  <input list="fruits" name="selectedFruit" id="selectedFruit" placeholder="Start typing...">
+  <datalist id="fruits">
+    <option value="Apple">
+    <option value="Banana">
+    <option value="Orange">
+    <option value="Grapes">
+    <option value="Mango">
+    <!-- Add more fruit options as needed. -->
+  </datalist>
+
+
+</body>
+</html>
